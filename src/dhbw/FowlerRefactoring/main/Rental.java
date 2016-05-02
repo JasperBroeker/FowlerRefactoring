@@ -14,11 +14,11 @@ public class Rental {
         return movie;
     }
 
-    double getCharge () {
-        return movie.getCharge( daysRented );
+    int getFrequentRenterPoints () {
+        return movie.price.getFrequentRenterPoints( getDaysRented() );
     }
 
-    int getFrequentRenterPoints () {
-        return movie.getFrequentRenterPoints( daysRented );
+    double calculateCharge () {
+        return movie.price.getCharge( daysRented );
     }
 }
