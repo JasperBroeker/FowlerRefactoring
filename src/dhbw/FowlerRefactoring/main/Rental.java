@@ -1,6 +1,6 @@
 package dhbw.fowlerRefactoring.main;
 
-class Rental {
+public class Rental {
     private Movie movie;
     private int daysRented;
     public Rental(Movie newmovie, int newdaysRented) {
