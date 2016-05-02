@@ -8,14 +8,16 @@ public class Movie {
     Price price;
     private String title;
 
-    public Movie(String newtitle, int newpriceCode) {
+    public Movie( String newtitle, int newpriceCode ) {
         title = newtitle;
         setPriceCode( newpriceCode );
     }
 
-    public int getPriceCode() { return price.getPriceCode(); }
+    public int getPriceCode() {
+        return price.getPriceCode();
+    }
 
-    public void setPriceCode(int arg) {
+    public void setPriceCode( int arg ) {
         switch ( arg ) {
             case REGULAR:
                 price = new RegularPrice();
@@ -30,11 +32,12 @@ public class Movie {
                 throw new IllegalArgumentException( "Incorrect Price Code" );
         }
     }
-    public String getTitle (){
+
+    public String getTitle() {
         return title;
     }
 
-    int getFrequentRenterPoints (int daysRented ) {
+    public int getFrequentRenterPoints( int daysRented ) {
         return price.getFrequentRenterPoints( daysRented );
     }
 

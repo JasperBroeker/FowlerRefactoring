@@ -12,7 +12,7 @@ import org.junit.Test;
 public class MovieStoreTest {
 
     @Test
-    public void rentTwoMovies () throws Exception {
+    public void rentTwoMovies() throws Exception {
         String ref = "dhbw.fowlerRefactoring.main.Rental Record for Sonny\n" +
                 "\tTitle\t\tDays\tAmount\n" +
                 "\tmovie1\t\t10\t30.0\n" +
@@ -36,7 +36,7 @@ public class MovieStoreTest {
     }
 
     @Test
-    public void testRentNoMovie () {
+    public void testRentNoMovie() {
         String ref = "dhbw.fowlerRefactoring.main.Rental Record for Sonny\n" +
                 "\tTitle\t\tDays\tAmount\n" +
                 "Amount owed is 0.0\n" +
@@ -49,7 +49,7 @@ public class MovieStoreTest {
         Assert.assertEquals( ref, sonnyStatement );
     }
 
-    private Customer generateCustomer (String name) {
+    private Customer generateCustomer( String name ) {
         Customer customer = new Customer( name );
         return customer;
     }

@@ -12,7 +12,7 @@ import org.junit.Test;
 public class MovieStoreHtmlTest {
 
     @Test
-    public void rentTwoMovies () throws Exception {
+    public void rentTwoMovies() throws Exception {
         String ref = "<H1>Rentals for <EM>Sonny</EM></H1><P>\n" +
                 "movie1: 30.0<BR>\n" +
                 "movie2: 4.5<BR>\n" +
@@ -35,7 +35,7 @@ public class MovieStoreHtmlTest {
     }
 
     @Test
-    public void testRentNoMovieHtml () {
+    public void testRentNoMovieHtml() {
         String ref = "<H1>Rentals for <EM>Sonny</EM></H1><P>\n" +
                 "<P>You owe <EM>0.0</EM><P>\n" +
                 "On this rental you earned <EM>0</EM> frequent rentar points <P>";
@@ -47,7 +47,7 @@ public class MovieStoreHtmlTest {
         Assert.assertEquals( ref, sonnyStatement );
     }
 
-    private Customer generateCustomer (String name) {
+    private Customer generateCustomer( String name ) {
         Customer customer = new Customer( name );
         return customer;
     }
