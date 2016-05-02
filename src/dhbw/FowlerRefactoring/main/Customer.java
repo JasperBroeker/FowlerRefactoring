@@ -27,7 +27,7 @@ public class Customer {
             // add bonus for a two day new release rental
             frequentRenterPoints += each.getFrequentRenterPoints();
             //show figures for this rental
-            result += "\t" + each.getMovie().getTitle()+ "\t" + "\t" + each.getDaysRented() + "\t" + String.valueOf(each.getCharge()) + "\n";
+            result += "\t" + each.getMovie().getTitle()+ "\t" + "\t" + each.getDaysRented() + "\t" + String.valueOf( each.getCharge()) + "\n";
             totalAmount += each.getCharge();
         }
         //add footer lines

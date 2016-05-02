@@ -1,7 +1,7 @@
 package dhbw.fowlerRefactoring.main;
 
 public class Rental {
-    private Movie movie;
+    Movie movie;
     private int daysRented;
     public Rental(Movie newmovie, int newdaysRented) {
         movie = newmovie;
@@ -14,30 +14,11 @@ public class Rental {
         return movie;
     }
 
-    double getCharge() {
-        double price = 0;
-        switch ( getMovie().getPriceCode()) {
-            case Movie.REGULAR:
-                price += 2;
-                if ( getDaysRented() > 2)
-                    price += (getDaysRented() - 2) * 1.5;
-                break;
-            case Movie.NEW_RELEASE:
-                price += getDaysRented() * 3;
-                break;
-            case Movie.CHILDRENS:
-                price += 1.5;
-                if ( getDaysRented() > 3)
-                    price += (getDaysRented() - 3) * 1.5;
-                break;
-        }
-        return price;
+    double getCharge () {
+        return movie.getCharge( daysRented );
     }
 
-    int getFrequentRenterPoints( ) {
-        if ((getMovie().getPriceCode() == Movie.NEW_RELEASE) && getDaysRented() > 1)
-            return 2;
-        else
-            return 1;
+    int getFrequentRenterPoints () {
+        return movie.getFrequentRenterPoints( daysRented );
     }
 }
